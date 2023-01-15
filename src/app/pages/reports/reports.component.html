@@ -1,5 +1,15 @@
 <div class="alert alert-primary d-flex justify-content-end" role="alert">
-    <button type="button" class="btn btn-primary" (click)="showBasicDialog()">Primary</button>
+    <button type="button" class="btn btn-primary" (click)="showBasicDialog()">Novo</button>
 </div>
 <app-standard-dialog (onClose)="onClose()" [title]="'Relatório'" [displayBasic]="displayBasic">
 </app-standard-dialog>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="/locura">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>

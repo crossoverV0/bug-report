@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reports.component.scss']
 })
 export class ReportsComponent implements OnInit{
-  displayBasic: boolean = true; 
+  displayBasic: boolean = false; 
 
   constructor(){}
 
@@ -19,4 +19,5 @@ export class ReportsComponent implements OnInit{
   onClose(){
     this.displayBasic = false
   }
+  
 }
