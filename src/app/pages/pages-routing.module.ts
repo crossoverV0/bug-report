@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 import { PagesComponent } from './pages.component';
-import { ReportFormComponent } from './report-form/report-form.component';
-
+import { ReportsComponent } from './reports/reports.component';
 
 const routes: Routes = [
   {
@@ -11,24 +10,28 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       {
-        path: 'relatorio',
-        component: ReportFormComponent
-      },
-      { 
-        path: '**', 
-        redirectTo: '404', 
-        pathMatch: 'full' 
-      },
-      { 
-        path: '404', 
+        path: '',
         component: NotFoundComponent 
-      }
+      },
+      {
+        path: 'relatorio',
+        component: ReportsComponent
+      },
     ]
   },
+  { 
+    path: '**', 
+    redirectTo: '404', 
+    pathMatch: 'full' 
+  },
+  { 
+    path: '404', 
+    component: NotFoundComponent 
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class PagesRoutingModule { }

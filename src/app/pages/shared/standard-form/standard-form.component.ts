@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-standard-form',
@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./standard-form.component.scss']
 })
 export class StandardFormComponent {
-  title: string = 'Título padrão'
-  subTitle: string = 'sub título padrão'
+ @Input() title: string = 'Título padrão'
+ @Input() subTitle: string = 'sub título padrão'
 }

@@ -1,0 +1,5 @@
+<div class="alert alert-primary d-flex justify-content-end" role="alert">
+    <button type="button" class="btn btn-primary" (click)="showBasicDialog()">Primary</button>
+</div>
+<app-standard-dialog (onClose)="onClose()" [title]="'Relatório'" [displayBasic]="displayBasic">
+</app-standard-dialog>

@@ -1,1 +1,14 @@
-<app-standard-form></app-standard-form>
+<app-standard-dialog [title]="'Relatório'" [displayBasic]="openNewForm">
+    <div class="row">
+        <div class="col-12">
+            <app-input-text
+            label="Caminho"
+            >
+            </app-input-text>
+        </div>
+    </div>
+</app-standard-dialog>
+
+<div class="alert alert-primary d-flex justify-content-end" role="alert">
+    <button type="button" class="btn btn-primary" (click)="showDialogForm()">Primary</button>
+</div>
