@@ -12,7 +12,7 @@ import { NotFoundComponent } from './miscellaneous/not-found/not-found.component
 import {FormsModule} from '@angular/forms';
 import { ReportsComponent } from './reports/reports.component';
 import {TableModule} from 'primeng/table';
-
+import {SplitButtonModule} from 'primeng/splitbutton';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import {TableModule} from 'primeng/table';
     ReportsComponent,
   ],
   imports: [
+    SplitButtonModule,
     TableModule,
     CommonModule,
     ButtonModule,

@@ -8,6 +8,9 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class StandardDialogComponent implements OnInit{
   @Input() displayBasic: boolean = false;
+  @Input() position: string = 'top';
+  @Input() enableCancelButton: boolean = true;
+  @Input() enableSendButton: boolean = true;
   @Input() title: string = 'Título padrão'
  
   @Output()
@@ -20,6 +23,10 @@ export class StandardDialogComponent implements OnInit{
   }
 
   showDreg(){
+    this.onClose.emit()
+  }
+
+  cancel(){
     this.onClose.emit()
   }
 }

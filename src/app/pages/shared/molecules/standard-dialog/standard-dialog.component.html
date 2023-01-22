@@ -1,9 +1,9 @@
-<p-dialog (onHide)="showDreg()" [position]="'top'" [header]="title" [(visible)]="displayBasic" [style]="{width: '50vw'}" [baseZIndex]="10000">
+<p-dialog [draggable]="false" (onHide)="showDreg()" [position]="position" [header]="title" [(visible)]="displayBasic" [style]="{width: '50vw'}" [baseZIndex]="10000">
     <ng-content></ng-content>
     <ng-template pTemplate="footer">
         <div  class="d-flex justify-content-end gap-2">
-            <button type="button" class="btn btn-secondary">Cancelar</button>
-            <button type="button" class="btn btn-primary">Enviar</button>
+            <button *ngIf="enableCancelButton" type="button" (click)="cancel()" class="btn btn-secondary">Cancelar</button>
+            <button *ngIf="enableSendButton"  type="button" class="btn btn-primary">Enviar</button>
         </div>
     </ng-template>
 </p-dialog>
