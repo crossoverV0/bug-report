@@ -16,23 +16,7 @@ export class PagesComponent implements OnInit {
     private router: Router,
   ){}
 
-  ngOnInit(){
-    this.items = [
-      {
-          label: 'Novo',
-          icon: 'pi pi-fw pi-plus',
-          items: [
-              {label: 'Relatório', icon: 'pi pi-fw pi-file', command: () => {this.navigate('relatorio')}},
-              {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
-          ]
-      },
-      {
-        label: 'Histórico',
-        icon: 'pi pi-fw pi-clock',
-        command: () => {this.navigate('historico')}
-      }
-    ];
-  }
+  ngOnInit(){}
 
   navigate(route: string){
     this.router.navigate([`${route}`])

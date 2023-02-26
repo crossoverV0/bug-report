@@ -10,6 +10,7 @@ import { NotFoundComponent } from '../shared/not-found/not-found.component';
 import {FormsModule} from '@angular/forms';
 import {TableModule} from 'primeng/table';
 import {SplitButtonModule} from 'primeng/splitbutton';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {SplitButtonModule} from 'primeng/splitbutton';
     NotFoundComponent,
   ],
   imports: [
+    SharedModule,
     SplitButtonModule,
     TableModule,
     CommonModule,
