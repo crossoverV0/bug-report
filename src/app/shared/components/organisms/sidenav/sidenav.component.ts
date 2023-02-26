@@ -1,15 +1,24 @@
-import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationStart, Router, Scroll } from '@angular/router';
+import { first, take } from 'rxjs';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent {
+export class SidenavComponent implements OnInit{
   lastItem: any
 
-  constructor(private router: Router){}
+  constructor(private router: Router,  private route: ActivatedRoute){}
+
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if(event instanceof Scroll) {
+        this.activeRoute(event.routerEvent.url)
+      }
+    });
+  }
   
   @Input() items: any[] = [
     {
@@ -47,5 +56,12 @@ export class SidenavComponent {
     this.lastItem = item
     item.active = true
     this.router.navigateByUrl(`${event}`, { skipLocationChange: true })
+  }
+
+  activeRoute(url: string){
+    const index = this.items.findIndex(item => item.link === url)
+    if(index > 0){
+      this.items[index].active = true
+    }
   }
 }

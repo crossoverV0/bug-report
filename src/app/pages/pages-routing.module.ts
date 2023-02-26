@@ -10,8 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'relatorio',
-        pathMatch: 'full' 
+        component: NotFoundComponent
       },
       {
         path: 'relatorios',
