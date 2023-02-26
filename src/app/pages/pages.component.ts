@@ -21,6 +21,8 @@ export class PagesComponent implements OnInit {
   navigate(route: string){
     this.router.navigate([`${route}`])
   }
+
+  
 }
 
 

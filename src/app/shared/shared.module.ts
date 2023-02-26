@@ -4,18 +4,18 @@ import { SidenavComponent } from './components/organisms/sidenav/sidenav.compone
 import { ToolsbarComponent } from './components/organisms/toolsbar/toolsbar.component';
 
 
-
 @NgModule({
   declarations: [
     SidenavComponent,
-    ToolsbarComponent
+    ToolsbarComponent,
+   
   ],
   imports: [
     CommonModule
   ],
   exports: [
     SidenavComponent,
-    ToolsbarComponent
+    ToolsbarComponent,
   ]
 })
 export class SharedModule { }
