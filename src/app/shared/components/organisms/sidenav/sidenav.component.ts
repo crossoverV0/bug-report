@@ -13,14 +13,20 @@ export class SidenavComponent {
   
   @Input() items: any[] = [
     {
+      name: 'Run',
+      link: '/run',
+      id: 0,
+      active: false
+    },
+    {
       name: 'Tarefas',
       link: '/tarefas',
       id: 1,
       active: false
     },
     {
-      name: 'BUGs',
-      link: '/bugs',
+      name: 'Relatórios',
+      link: '/relatorios',
       id: 2,
       active: false
     },
@@ -34,13 +40,12 @@ export class SidenavComponent {
 
   onClickItem(event: any){
     if(this.lastItem){
-      console.log(event)
       const index = this.items.findIndex(item => item.id === this.lastItem.id)
       this.items[index].active = false
     }
     const item = this.items.filter(item => item.link == event)[0]
     this.lastItem = item
     item.active = true
-    // this.router.navigateByUrl(`${event}`, { skipLocationChange: true })
+    this.router.navigateByUrl(`${event}`, { skipLocationChange: true })
   }
 }

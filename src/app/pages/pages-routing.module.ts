@@ -13,6 +13,13 @@ const routes: Routes = [
         redirectTo: 'relatorio',
         pathMatch: 'full' 
       },
+      {
+        path: 'relatorios',
+        loadComponent: () =>
+          import('./reports/reports.component').then(
+            (c) => c.ReportsComponent
+          )
+      }
     ]
   },
   { 

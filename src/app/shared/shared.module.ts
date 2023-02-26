@@ -14,7 +14,8 @@ import { ToolsbarComponent } from './components/organisms/toolsbar/toolsbar.comp
     CommonModule
   ],
   exports: [
-    SidenavComponent
+    SidenavComponent,
+    ToolsbarComponent
   ]
 })
 export class SharedModule { }
