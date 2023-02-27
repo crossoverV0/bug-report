@@ -1,7 +1,8 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { ReportInterface } from '../shared/interfaces/report';
 
 
 @Component({
@@ -22,7 +23,16 @@ export class PagesComponent implements OnInit {
     this.router.navigate([`${route}`])
   }
 
-  
+  @Input() cards:ReportInterface[] = [
+    {
+      descricao: 'Erro ao tentar editar card',
+      responsavel: 'Tiago Menezes',
+    },
+    {
+      descricao: 'Erro ao tentar adicionar propriedade a formulário',
+      responsavel: 'Tiago Menezes',
+    }
+  ]
 }
 
 

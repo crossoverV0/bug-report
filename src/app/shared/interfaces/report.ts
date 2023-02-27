@@ -1,7 +1,7 @@
 import { ReportPropertyInterface } from "./report-property";
 
 export interface ReportInterface{
-   responsible: string,
-   description: string,
-   property: ReportPropertyInterface[]
+   responsavel?: string,
+   descricao?: string,
+   property?: ReportPropertyInterface[]
 }
