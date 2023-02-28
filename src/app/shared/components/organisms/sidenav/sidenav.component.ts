@@ -23,25 +23,25 @@ export class SidenavComponent implements OnInit{
   @Input() items: any[] = [
     {
       name: 'Run',
-      link: '/run',
+      link: 'run',
       id: 0,
       active: false
     },
     {
       name: 'Tarefas',
-      link: '/tarefas',
+      link: 'tarefas',
       id: 1,
       active: false
     },
     {
       name: 'Relatórios',
-      link: '/relatorios',
+      link: 'relatorios',
       id: 2,
       active: false
     },
     {
       name: 'Calls',
-      link: '/calls',
+      link: 'calls',
       id: 3,
       active: false
     },
@@ -55,7 +55,7 @@ export class SidenavComponent implements OnInit{
     const item = this.items.filter(item => item.link == event)[0]
     this.lastItem = item
     item.active = true
-    this.router.navigateByUrl(`${event}`, { skipLocationChange: true })
+    this.router.navigate([`${event}`])
   }
 
   activeRoute(url: string){

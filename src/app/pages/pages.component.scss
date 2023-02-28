@@ -15,7 +15,7 @@ section{
 
 .sidenav {
     height: 100%;
-    width: 16rem;
+    width: auto;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -26,6 +26,15 @@ section{
   }
   
   .main {
-    margin-left: 16rem; /* Same as the width of the sidenav */
+    margin-left: 14rem; /* Same as the width of the sidenav */
+  }
+
+  .content{
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+    height: 100%;
+    min-height: 86vh;
+    background-color: #1B1B1D;
   }
   

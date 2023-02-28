@@ -8,10 +8,10 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-      {
-        path: '',
-        component: NotFoundComponent
-      },
+      // {
+      //   path: '',
+      //   component: NotFoundComponent
+      // },
       {
         path: 'relatorios',
         loadComponent: () =>

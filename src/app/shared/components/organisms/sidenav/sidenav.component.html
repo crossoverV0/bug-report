@@ -1,7 +1,7 @@
 <ul>
    <li *ngFor="let item of items">
       <a [ngClass]="item.active ? 'active' : null" class="d-flex" (click)="onClickItem(item.link)">
-         <div id="decoration"></div>
+         <div  id="decoration"></div>
          <p>{{item.name}}</p>
       </a>
    </li>

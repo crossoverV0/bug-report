@@ -1,5 +1,19 @@
-.body{
-   width: 15rem;
-   height: 9rem;
-   background-color: rgba(33, 33, 33, 1);
-}
+#segundo{
+   width: 150px;
+   height: 150px;
+   background: green;
+   margin: auto;
+   &:hover {
+      ~ #efeito {
+         background: blue
+     }
+  }
+ }
+ #efeito{
+   width: 90px;
+   height: 90px;
+   background: pink;
+   float: left; 
+   margin-left:300px;
+   top:8px;
+ }

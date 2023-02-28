@@ -1,11 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
+import { ReportCardComponent } from './../../shared/components/molecules/report-card/report-card.component';
 
 @Component({
   selector: 'app-reports',
   standalone: true,
   imports: [
-    CommonModule,
+  CommonModule,
+  ReportCardComponent
   ],
   templateUrl: './reports.component.html',
   styleUrls: ['./reports.component.scss']
