@@ -1,8 +1,8 @@
 <ul>
    <li *ngFor="let item of items">
-      <a [ngClass]="item.active ? 'active' : null" class="d-flex justify-content-between" (click)="onClickItem(item.link)">
-         <p>{{item.name}}</p>
+      <a [ngClass]="item.active ? 'active' : null" class="d-flex" (click)="onClickItem(item.link)">
          <div id="decoration"></div>
+         <p>{{item.name}}</p>
       </a>
    </li>
 </ul>

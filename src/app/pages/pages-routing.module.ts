@@ -18,18 +18,19 @@ const routes: Routes = [
           import('./reports/reports.component').then(
             (c) => c.ReportsComponent
           )
+      },
+      { 
+        path: '**', 
+        redirectTo: '404', 
+        pathMatch: 'full' 
+      },
+      { 
+        path: '404', 
+        component: NotFoundComponent 
       }
     ]
   },
-  { 
-    path: '**', 
-    redirectTo: '404', 
-    pathMatch: 'full' 
-  },
-  { 
-    path: '404', 
-    component: NotFoundComponent 
-  }
+ 
 ];
 
 @NgModule({
