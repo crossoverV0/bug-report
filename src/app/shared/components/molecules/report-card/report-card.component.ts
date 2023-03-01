@@ -10,7 +10,7 @@ templateUrl: './report-card.component.html',
   styleUrls: ['./report-card.component.scss']
 })
 export class ReportCardComponent {
-  @Input() showStatus: boolean = false
+  @Input() title: string = 'Título padrão de card!'
   @Input() data: ReportInterface = {
     descricao: 'descricao padrão'
   }

@@ -13,39 +13,54 @@ export class SidenavComponent implements OnInit{
   constructor(private router: Router,  private route: ActivatedRoute){}
 
   ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if(event instanceof Scroll) {
-        this.activeRoute(event.routerEvent.url)
-      }
-    });
+    const path = this.route.firstChild?.snapshot?.routeConfig?.path
+    if(path){
+      console.log('foi aqui')
+      this.validateRoute(`/${path}`, true)
+    }
+    // this.router.events.subscribe((event) => {
+    //   if(event instanceof Scroll) {
+    //     console.log(event)
+    //     this.activeRoute(event.routerEvent.url)
+    //   }
+    // });
   }
   
   @Input() items: any[] = [
     {
       name: 'Run',
-      link: 'run',
+      link: '/rhhh',
       id: 0,
       active: false
     },
     {
       name: 'Tarefas',
-      link: 'tarefas',
+      link: '/tarefas',
       id: 1,
       active: false
     },
     {
       name: 'Relatórios',
-      link: 'relatorios',
+      link: '/relatorios',
       id: 2,
       active: false
     },
     {
       name: 'Calls',
-      link: 'calls',
+      link: '/calls',
       id: 3,
       active: false
     },
   ]
+
+  validateRoute(path: string, newComponent: boolean){
+    const index = this.items.findIndex(item => item.link === path)
+    if(index >= 0) {
+      if(newComponent) this.lastItem = this.items[index]
+      this.activeRoute(index)
+    }
+    
+  }
 
   onClickItem(event: any){
     if(this.lastItem){
@@ -58,10 +73,7 @@ export class SidenavComponent implements OnInit{
     this.router.navigate([`${event}`])
   }
 
-  activeRoute(url: string){
-    const index = this.items.findIndex(item => item.link === url)
-    if(index > 0){
+  activeRoute(index: any){
       this.items[index].active = true
-    }
   }
 }

@@ -19,6 +19,13 @@ const routes: Routes = [
             (c) => c.ReportsComponent
           )
       },
+      {
+        path: 'tarefas',
+        loadComponent: () =>
+          import('./tasks/tasks.component').then(
+            (c) => c.TasksComponent
+          )
+      },
       { 
         path: '**', 
         redirectTo: '404', 
