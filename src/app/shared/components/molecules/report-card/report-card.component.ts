@@ -11,9 +11,21 @@ templateUrl: './report-card.component.html',
 })
 export class ReportCardComponent {
   @Input() title: string = 'Título padrão de card!'
+  
   @Input() data: ReportInterface = {
-    descricao: 'descricao padrão'
+    descricao: 'descricao padrão',
+    labels: [
+      {
+        tipo: 'status',
+        valor: 'Novo'
+      },
+      {
+        tipo: 'area',
+        valor: 'Front-end'
+      }
+  ]
   }
+  labels = this.data.labels
 
   openContent(){
     console.log('content')

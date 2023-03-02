@@ -1,13 +1,18 @@
 <div class="c-card">
    <div class="c-content">
       <div class="c-title">
-         <span id="title">{{title}}</span>
+         <span class="card-title">{{title}}</span>
       </div>
-      <div class="c-labels"><span class="badge text-bg-primary">Primary</span></div>
+      <div class="c-labels">
+         <span 
+            *ngFor="let label of labels" 
+            class="badge text-bg-primary mb-1"
+         >{{label.valor}}</span>
+      </div>
    </div>
    <div class="c-actions">
       <div class="c-loader"></div>
-      <div class="c-button"></div>
    </div>
+   <button type="button" class="btn btn-primary btn-sm">Finalizar</button>
 </div>
 
