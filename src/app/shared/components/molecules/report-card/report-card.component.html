@@ -1,4 +1,4 @@
-<div class="c-card">
+<div (click)="openContent()" class="c-card">
    <div class="c-content">
       <div class="c-title">
          <span class="card-title">{{title}}</span>
@@ -11,8 +11,12 @@
       </div>
    </div>
    <div class="c-actions">
-      <div class="c-loader"></div>
+      <div class="c-loader">
+         <app-card-loader *ngIf="estate == 'EM_PROGRESSO'" style="position:absolute; top: 30px; right: 50px;"></app-card-loader>
+      </div>
    </div>
-   <button type="button" class="btn btn-primary btn-sm">Finalizar</button>
+   <button (click)="onClick()" type="button" class="btn btn-primary btn-sm">{{action}}</button>
 </div>
+
+<app-dialog [displayModal]="openMasterDetails" [id]="data.id"></app-dialog>
 

@@ -1,33 +1,54 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReportInterface } from './../../../interfaces/report';
+import { CardLoaderComponent } from './../../../../common/card-loader/card-loader.component';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-report-card',
   standalone: true,
-  imports: [CommonModule],
-templateUrl: './report-card.component.html',
+  imports: [CommonModule, CardLoaderComponent, DialogComponent],
+  templateUrl: './report-card.component.html',
   styleUrls: ['./report-card.component.scss']
 })
 export class ReportCardComponent {
   @Input() title: string = 'Título padrão de card!'
-  
   @Input() data: ReportInterface = {
+    id: 'sdkjfksldajfsda',
     descricao: 'descricao padrão',
     labels: [
       {
-        tipo: 'status',
+        chave: 'status',
         valor: 'Novo'
       },
       {
-        tipo: 'area',
+        chave: 'area',
         valor: 'Front-end'
       }
-  ]
+    ],
+    estado: {
+      chave: "DISPONIVEL",
+      valor: "Disponível"
+    }
   }
+  openMasterDetails: boolean = false
+  estate = this.data.estado?.chave || 'teste'
+  action: string = 'Iniciar'
   labels = this.data.labels
 
   openContent(){
-    console.log('content')
+    this.openMasterDetails = true
+  }
+
+  onClick(){
+    switch(this.estate) {
+      case 'DISPONIVEL':
+        this.estate = 'EM_PROGRESSO'
+        this.action = 'Finalizar'
+        break;
+      case 'EM_PROGRESSO':
+        this.estate = 'FINALIZADO'
+        break;
+    }
   }
 }
