@@ -1,6 +1,6 @@
 import { ReportPropertyInterface } from "./report-property";
 
-export interface ReportInterface{
+export interface ReportCradInterface{
    id?: any,
    estado?: TypeInterface,
    responsavel?: string,

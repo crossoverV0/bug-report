@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReportInterface } from './../../../interfaces/report';
 import { CardLoaderComponent } from './../../../../common/card-loader/card-loader.component';
 import { DialogComponent } from '../dialog/dialog.component';
 
@@ -13,7 +12,7 @@ import { DialogComponent } from '../dialog/dialog.component';
 })
 export class ReportCardComponent {
   @Input() title: string = 'Título padrão de card!'
-  @Input() data: ReportInterface = {
+  @Input() data: any = {
     id: 'sdkjfksldajfsda',
     descricao: 'descricao padrão',
     labels: [
