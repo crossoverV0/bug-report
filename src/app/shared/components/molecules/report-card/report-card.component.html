@@ -1,7 +1,13 @@
-<div (click)="openContent()" class="c-card">
+<div (dblclick)="openContent()" class="c-card">
    <div class="c-content">
       <div class="c-title">
-         <span class="card-title">{{title}}</span>
+         <span 
+            [class.clicked]="isClicked" 
+            (mousedown)="isClicked = true" 
+            (mouseup)="isClicked = false" 
+            (click)="openContent()" 
+            class="card-title" 
+         >{{title}}</span>
       </div>
       <div class="c-labels">
          <span 
@@ -12,11 +18,9 @@
    </div>
    <div class="c-actions">
       <div class="c-loader">
-         <app-card-loader *ngIf="estate == 'EM_PROGRESSO'" style="position:absolute; top: 30px; right: 50px;"></app-card-loader>
+         <app-card-loader *ngIf="estate.chave == 'EM_PROGRESSO'" style="position:absolute; top: 30px; right: 50px;"></app-card-loader>
       </div>
    </div>
    <button (click)="onClick()" type="button" class="btn btn-primary btn-sm">{{action}}</button>
 </div>
-
-<app-dialog [displayModal]="openMasterDetails" [id]="data.id"></app-dialog>
 

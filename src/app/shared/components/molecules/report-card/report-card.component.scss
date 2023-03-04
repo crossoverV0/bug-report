@@ -9,9 +9,13 @@
    background-color: #2B2B2B;
 
    &:hover{
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
    }
 }
+
+.clicked {
+   color: #255AD6;
+ }
 
 .c-title{
    width: 100%;
@@ -32,7 +36,7 @@
 }
 
 button{
-   position:absolute ;
+   position:absolute;
    bottom:16px;
    right: 20px;
 }

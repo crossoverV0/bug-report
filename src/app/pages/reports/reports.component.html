@@ -1,3 +1,7 @@
-<app-report-card
+<div class="cards-container">
+   <app-report-card
    *ngFor="let card of cards"
+   [title]="card.descricao"
+   [estate]="card.estado"
 ></app-report-card>
+</div>

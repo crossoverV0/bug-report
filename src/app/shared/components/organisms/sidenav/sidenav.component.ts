@@ -15,7 +15,6 @@ export class SidenavComponent implements OnInit{
   ngOnInit(): void {
     const path = this.route.firstChild?.snapshot?.routeConfig?.path
     if(path){
-      console.log('foi aqui')
       this.validateRoute(`/${path}`, true)
     }
     // this.router.events.subscribe((event) => {

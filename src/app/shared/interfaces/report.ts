@@ -1,15 +1,23 @@
 import { ReportPropertyInterface } from "./report-property";
 
-export interface ReportCradInterface{
+export interface ReportInterface{
    id?: any,
    estado?: TypeInterface,
    responsavel?: string,
    descricao?: string,
    labels?: TypeInterface[],
-   property?: ReportPropertyInterface[]
+   propertys?: ReportPropertyInterface[]
 }
 
-interface TypeInterface{
+export interface ReportCardInterface{
+   estado?: TypeInterface,
+   responsavel?: string,
+   descricao?: string,
+   labels?: TypeInterface[],
+}
+
+export interface TypeInterface{
+   id: number,
    chave: string,
    valor: string
 }
