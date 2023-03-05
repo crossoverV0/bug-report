@@ -25,6 +25,11 @@ export class ReportsComponent {
     {
       descricao: 'Erro ao tentar editar card',
       estado: {chave: 'EM_PROGRESSO', valor:'Em progresso', id:1},
+      labels: [
+        {chave: 'EM_PROGRESSO', valor:'Em progresso', id:1},
+        {chave: 'EM_PROGRESSO', valor:'Em progresso', id:1},
+        {chave: 'EM_PROGRESSO', valor:'Em progresso e test', id:1}
+      ],
       responsavel: 'Tiago Menezes',
       analista: 'Lucas Silva',
       area: 'Front-End'

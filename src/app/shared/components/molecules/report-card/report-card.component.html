@@ -1,26 +1,29 @@
-<div (dblclick)="openContent()" class="c-card">
+<div class="c-card">
    <div class="c-content">
-      <div class="c-title">
-         <span 
-            [class.clicked]="isClicked" 
-            (mousedown)="isClicked = true" 
-            (mouseup)="isClicked = false" 
-            (click)="openContent()" 
-            class="card-title" 
-         >{{title}}</span>
+      <div (click)="openContent()" class="item item-1">
+         <div class="c-title">
+            <span
+               style="cursor: pointer;"
+               [class.clicked]="isClicked" 
+               (mousedown)="isClicked = true" 
+               (mouseup)="isClicked = false" 
+               (click)="openContent()" 
+               class="card-title title" 
+            >{{title}}</span>
+         </div>
+         <div class="c-labels">
+            <span 
+               *ngFor="let label of labels" 
+               class="badge text-bg-primary mb-1"
+            >{{label.valor}}</span>
+         </div>
       </div>
-      <div class="c-labels">
-         <span 
-            *ngFor="let label of labels" 
-            class="badge text-bg-primary mb-1"
-         >{{label.valor}}</span>
+      <div class="item item-2">  
+      </div>
+      <div class="item item-3">
+         <div *ngIf="estate.chave == 'EM_PROGRESSO'" class="c-actions">
+            <button (click)="returnReport()" type="button" class="btn btn-primary btn-sm">Finalizar</button>
+         </div>
       </div>
    </div>
-   <div class="c-actions">
-      <div class="c-loader">
-         <app-card-loader *ngIf="estate.chave == 'EM_PROGRESSO'" style="position:absolute; top: 30px; right: 50px;"></app-card-loader>
-      </div>
-   </div>
-   <button (click)="onClick()" type="button" class="btn btn-primary btn-sm">{{action}}</button>
 </div>
-

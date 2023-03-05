@@ -23,9 +23,7 @@ export class ReportCardComponent implements OnInit {
 
   ngOnInit(){}
 
-  openContent(){
-    this.openMasterDetails = true
-  }
+  openContent(){}
 
   onClick(){
     switch(this.estate.chave) {
@@ -38,5 +36,7 @@ export class ReportCardComponent implements OnInit {
         break;
     }
   }
+
+  returnReport(){}
 
 }
