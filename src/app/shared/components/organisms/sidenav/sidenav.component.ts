@@ -27,6 +27,12 @@ export class SidenavComponent implements OnInit{
   
   @Input() items: any[] = [
     {
+      name: 'Relatórios',
+      link: '/relatorios',
+      id: 2,
+      active: false
+    },
+    {
       name: 'Run',
       link: '/rhhh',
       id: 0,
@@ -36,12 +42,6 @@ export class SidenavComponent implements OnInit{
       name: 'Tarefas',
       link: '/tarefas',
       id: 1,
-      active: false
-    },
-    {
-      name: 'Relatórios',
-      link: '/relatorios',
-      id: 2,
       active: false
     },
     {

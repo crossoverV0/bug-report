@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { ReportCardComponent } from './../../shared/components/molecules/report-card/report-card.component';
+import { ReportCardComponent } from '../../shared/components/organisms/report-card/report-card.component';
 import { DialogComponent } from 'src/app/shared/components/molecules/dialog/dialog.component';
 
 @Component({
@@ -34,27 +34,27 @@ export class ReportsComponent {
       analista: 'Lucas Silva',
       area: 'Front-End'
     },
-    {
-      descricao: 'Erro ao tentar adicionar propriedade a formulário',
-      estado: {chave: 'DISPONIVEL', valor:'Disponivel',id:2},
-      responsavel: 'Tiago Menezes',
-      analista: 'Lucas Silva',
-      area: 'Front-End'
-    },
-    {
-      descricao: 'Erro ao tentar editar card',
-      estado: {chave: 'DISPONIVEL', valor:'Disponivel', id:3},
-      responsavel: 'Tiago Menezes',
-      analista: 'Lucas Silva',
-      area: 'Front-End'
-    },
-    {
-      descricao: 'Erro ao tentar editar card',
-      estado: {chave: 'DISPONIVEL', valor:'Disponivel', id:3},
-      responsavel: 'Tiago Menezes',
-      analista: 'Lucas Silva',
-      area: 'Front-End'
-    }
+    // {
+    //   descricao: 'Erro ao tentar adicionar propriedade a formulário',
+    //   estado: {chave: 'DISPONIVEL', valor:'Disponivel',id:2},
+    //   responsavel: 'Tiago Menezes',
+    //   analista: 'Lucas Silva',
+    //   area: 'Front-End'
+    // },
+    // {
+    //   descricao: 'Erro ao tentar editar card',
+    //   estado: {chave: 'DISPONIVEL', valor:'Disponivel', id:3},
+    //   responsavel: 'Tiago Menezes',
+    //   analista: 'Lucas Silva',
+    //   area: 'Front-End'
+    // },
+    // {
+    //   descricao: 'Erro ao tentar editar card',
+    //   estado: {chave: 'DISPONIVEL', valor:'Disponivel', id:3},
+    //   responsavel: 'Tiago Menezes',
+    //   analista: 'Lucas Silva',
+    //   area: 'Front-End'
+    // }
   ]
 
 }

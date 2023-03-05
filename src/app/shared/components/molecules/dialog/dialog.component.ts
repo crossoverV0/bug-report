@@ -11,5 +11,5 @@ import {DialogModule} from 'primeng/dialog';
 })
 export class DialogComponent {
   @Input() id?: any  
-  @Input() displayModal: boolean = false
+  @Input() openModal: boolean = false
 }
